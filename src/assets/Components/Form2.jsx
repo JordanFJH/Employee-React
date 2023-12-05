@@ -22,6 +22,13 @@ export default function Form({addUser}) {
             id: crypto.randomUUID()
 
         }
+
+        nameRef.current.value = "";
+        titleRef.current.value = "";
+        phoneRef.current.value = "";
+        emailRef.current.value = "";
+
+        addUser(employee);
     }
 
     return (

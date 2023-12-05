@@ -37,7 +37,10 @@ function App() {
         <div className='picture'>
           <img src={user.avatar} alt="face" />
         </div>
+        <div className='bio-box'>
         <h3>{user.first_name} {user.last_name}</h3>
+        <h4>{user.email}</h4>
+        </div>
 
 
       </div>
