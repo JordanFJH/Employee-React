@@ -5,6 +5,7 @@ import Form from './assets/Components/Form2';
 function App() {
 
   const [showForm, setShowForm] = useState(false);
+  const [showRemove, setShowRemove] = useState(false);
   const [users, setUsers] = useState([]);
   const [input, setInput] = useState("");
 
@@ -29,6 +30,12 @@ function App() {
 
   }, [])
 
+  function removeFunction() {
+    // return (<button>Remove</button>)
+
+    setShowRemove(!showRemove);
+  }
+
   // console.log(users);
 
   function showUsers(user) {
@@ -36,13 +43,18 @@ function App() {
       <div className='employee' key={user.id}>
         <div className='picture'>
           <img src={user.avatar} alt="face" />
+          {/* <button className='remove-button'>Remove</button> */}
+          {/* {showRemove && 
+            <button>Remove</button>
+          } */}
+        
+          <button onMouseEnter={removeFunction}>Remove</button>
+          
         </div>
         <div className='bio-box'>
         <h3>{user.first_name} {user.last_name}</h3>
         <h4>{user.email}</h4>
         </div>
-
-
       </div>
     )
   }

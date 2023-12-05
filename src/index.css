@@ -35,3 +35,7 @@ img {
     flex-direction: column;
 
 }
+
+.remove-button {
+    /* display: none; */
+}
