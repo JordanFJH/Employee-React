@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 
-import Form from './assets/Components/Form';
+import Form from './assets/Components/Form2';
 
 function App() {
 
@@ -25,9 +25,11 @@ function App() {
     }
 
     getData();
-    console.log(users);
+    // console.log(users);
 
   }, [])
+
+  // console.log(users);
 
   function showUsers(user) {
     return (
@@ -53,7 +55,7 @@ function App() {
     setInput(input2);
   }
 
-  let filteredEmployees = users.filter((emp) => emp.first_name.toLowerCase().includes(input.toLowerCase()));
+  let filteredEmployees = users.filter((emp) => emp.first_name.toLowerCase().includes(input.toLowerCase()) || emp.last_name.toLowerCase().includes(input.toLowerCase()));
 
   return (
     <div className='all-holder'>
@@ -69,6 +71,7 @@ function App() {
       {showForm &&
       <div className="form">
         <Form addUser={addUser}/>
+        {/* <Form addUser={addUser}/> */}
       </div>
     }
     </div>
