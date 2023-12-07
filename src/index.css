@@ -8,9 +8,11 @@ body {
 }
 
 .all-holder {
+    height: 1000px;
+    width: 500px;
     display: flex;
     flex-direction: column;
-    margin-top: 50%;
+    margin-top: 20%;
 }
 
 .employee {
@@ -19,13 +21,17 @@ body {
 }
 
 .people {
-    height: 400px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     border: 1px solid black;
     overflow: scroll;
 }
 
 img {
+    transform: scale(2);
+}
+
+.picture img {
     transform: scale(.8);
     border-radius: 50%;
 }
@@ -38,4 +44,9 @@ img {
 
 .remove-button {
     /* display: none; */
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
