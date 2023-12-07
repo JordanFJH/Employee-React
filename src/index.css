@@ -12,7 +12,7 @@ body {
     width: 500px;
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
+    margin-top: 20px;
 }
 
 .employee {
@@ -28,7 +28,7 @@ body {
 }
 
 img {
-    transform: scale(2);
+    
 }
 
 .picture img {
@@ -49,4 +49,9 @@ img {
 a {
     text-decoration: none;
     color: black;
+}
+
+.return-button {
+    position: absolute;
+    top: 0;
 }

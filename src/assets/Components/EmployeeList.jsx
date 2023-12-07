@@ -20,7 +20,7 @@ function EmployeeList({ users }) {
 
     function showUsers(user) {
         return (
-            <Link to={`/employeepage/${user.first_name}`} state={{user: user}} key={user.id}>
+            <Link to={`/employeepage/${user.first_name}`} state={{user: user}} key={user.id}> 
                 <div className='employee' >
                     <div className='picture'>
                         <img src={user.avatar} alt="face" />
