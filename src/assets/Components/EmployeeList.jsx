@@ -20,7 +20,7 @@ function EmployeeList({ users }) {
 
     function showUsers(user) {
         return (
-            <Link to={`/employeepage/${user.first_name}`} state={{user: user}} key={user.id}> 
+            <Link to={`/employeepage/${user.first_name}`} state={{ user: user }} key={user.id}>
                 <div className='employee' >
                     <div className='picture'>
                         <img src={user.avatar} alt="face" />
@@ -47,13 +47,15 @@ function EmployeeList({ users }) {
 
     return (
         <div className="all-holder">
-            <div className='people'>
-                <h1>Employee Directory</h1>
-                <div className='serch-bar'>
+            <div className="info">
+                    <h1>Employee Directory</h1>
+                    <h4>(Click on employee for more info)</h4>
                     <input type="text" placeholder='Search Employee' onChange={handleSearch} value={input} />
-                </div>
-                {filteredEmployees.map(showUsers)}
 
+                </div>
+            <div className='people'>
+                
+                {filteredEmployees.map(showUsers)}
                 <br />
             </div>
             <button onClick={handleForm}>{showForm ? "Hide" : "Add"} Employee</button>

@@ -8,14 +8,8 @@ import Form from './assets/Components/Form';
 
 function App() {
 
-  
   const [users, setUsers] = useState([]);
   
-
-  
-
-  
-
   useEffect(() => {
     async function getData() {
       try {
@@ -32,12 +26,6 @@ function App() {
     // console.log(users);
 
   }, [])
-
-  function removeFunction() {
-    // return (<button>Remove</button>)
-
-    setShowRemove(!showRemove);
-  }
 
 
   return (
