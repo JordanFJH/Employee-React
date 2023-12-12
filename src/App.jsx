@@ -32,7 +32,7 @@ function App() {
     <div className='all-holder'>
       <Routes>
         <Route path='/' element = {<EmployeeList users = {users}/>} />
-        <Route path='/employeepage/:employee' element = {<EmployeePage />}/>
+        <Route path='/employeepage/:employee' element = {<EmployeePage users = { users }/>}/>
       </Routes>
     </div>
   ) 

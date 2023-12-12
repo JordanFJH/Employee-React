@@ -1,13 +1,20 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function EmployeePage() {
 
-    const data = useLocation();
+function EmployeePage( { users } ) {
+
+
+    // const data = useLocation();
     // console.log(data.state.user);
-    let employee = data.state.user;
-    let navigate = useNavigate();
     // console.log(props.location)
+
+
+    let param = useParams();
+    let employee = users.filter((user) => user.first_name == param.employee);
+    employee = employee[0];
+    let navigate = useNavigate();
+    
     return (
         <div className="employee-page">
             <button onClick={() => navigate("/")} className="return-button"> Return </button>
